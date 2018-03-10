@@ -1,0 +1,45 @@
+<!--
+  Generated template for the CharacterPickerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Player Setup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>Number of Players?</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-range min="2" max="4" step="1" snaps="true" [(ngModel)]="playerCount" (ionChange)="updateGameCharacters()"></ion-range>
+      <span item-end>{{playerCount}}</span>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>Which Characters?</ion-label>
+      <button ion-button item-end (click)="toggleAll()">{{selectLabel}}</button>
+    </ion-item-divider>
+
+    <ion-item *ngFor="let character of gameCharacters">
+      <ion-checkbox [(ngModel)]="character.selected" (ionChange)="updateGameCharacters()"></ion-checkbox>
+      <ion-label>{{character.item.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list text-center>
+      <button ion-button text-center [disabled]="!generateEnabled" (click)="generate()">Generate Players</button>
+  </ion-list>
+
+</ion-content>

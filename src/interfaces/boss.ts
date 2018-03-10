@@ -7,4 +7,5 @@ export interface IBoss {
     rules: string;
     prize: string;
     points: number;
+    source: string;
 }

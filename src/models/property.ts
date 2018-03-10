@@ -8,8 +8,6 @@ export class Property implements IProperty {
     monopoly_rent: number;
     points: number;
 
-    selected: boolean = false;
-
     constructor(propertyData: IProperty) {
         for (let key in propertyData) {
             if (propertyData.hasOwnProperty(key)) {

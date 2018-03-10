@@ -26,10 +26,10 @@
       <span item-end>{{propertyPoints}} pts</span>
     </ion-item-divider>
 
-    <ion-item *ngFor="let property of properties" ngClass="{{property.color}}">
-      <ion-checkbox [(ngModel)]="property.selected" (ionChange)="updatePropertyPoints()" [color]="property.color"></ion-checkbox>
-      <ion-label>{{property.name}}</ion-label>
-      <span item-end>{{property.points}} pts</span>
+    <ion-item *ngFor="let property of properties" ngClass="{{property.item.color}}">
+      <ion-checkbox [(ngModel)]="property.selected" (ionChange)="updatePropertyPoints()" [color]="property.item.color"></ion-checkbox>
+      <ion-label>{{property.item.name}}</ion-label>
+      <span item-end>{{property.item.points}} pts</span>
     </ion-item>
   </ion-list>
 
@@ -41,8 +41,8 @@
 
     <ion-item *ngFor="let boss of bosses">
       <ion-checkbox [(ngModel)]="boss.selected" (ionChange)="updateBossPoints()"></ion-checkbox>
-      <ion-label>{{boss.name}}</ion-label>
-      <span item-end>{{boss.points}} pts</span>
+      <ion-label>{{boss.item.name}}</ion-label>
+      <span item-end>{{boss.item.points}} pts</span>
     </ion-item>
   </ion-list>
 

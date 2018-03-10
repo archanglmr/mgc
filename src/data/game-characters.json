@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Mario",
+        "star_ability": "Roll the numbered die. Collect that many coins +5 from the Bank.",
+        "power_up_scope": "coins",
+        "power_up_ability": "Collect 4 coins from the bank",
+        "source": "base"
+    },
+    {
+        "name": "Princess Peach",
+        "star_ability": "Collect rent from the Bank for each Property you own.",
+        "power_up_scope": "red_shell",
+        "power_up_ability": "Choose any player to drop 4 Coins.",
+        "source": "base"
+    },
+    {
+        "name": "Yoshi",
+        "star_ability": "Collect all Coins on the board.",
+        "power_up_scope": "green_shell",
+        "power_up_ability": "Choose the next player in front of or behind you to drop 3 Coins.",
+        "source": "base"
+    },
+    {
+        "name": "Donky Kong",
+        "star_ability": "Steal 3 coins from each player.",
+        "power_up_scope": "pow",
+        "power_up_ability": "All other players drop 2 Coins.",
+        "source": "base"
+    },
+    {
+        "name": "Bowser",
+        "star_ability": "Collect 5 coins from the bank for each boss you've defeated",
+        "power_up_scope": "blooper",
+        "power_up_ability": "After you steal 2 coins from a player, steal 1 coin from all players.",
+        "source": "collectors"
+    },
+    {
+        "name": "Rosalina",
+        "star_ability": "You may drop 5 coins to steal another player's least expensive Property.",
+        "power_up_scope": "coins",
+        "power_up_ability": "You may collect rent from the Bank for any one of your Properties.",
+        "source": "power-pack"
+    },
+    {
+        "name": "Boo",
+        "star_ability": "You may drop 3 coins to use the Super Star ability of any other character on the board.",
+        "power_up_scope": "pow",
+        "power_up_ability": "All other players drop 1 coins. You may advance to the space diretly behind the next player on the board. Follow the rule for that space.",
+        "source": "power-pack"
+    },
+    {
+        "name": "Toad",
+        "star_ability": "Collect 5 Coins. Roll the numbered die, and move again.",
+        "power_up_scope": "pow",
+        "power_up_ability": "After player drop 1 coin, roll the numbered die, and move again.",
+        "source": "power-pack"
+    },
+    {
+        "name": "Luigi",
+        "star_ability": "All other player skip their next Power-Up die roll.",
+        "power_up_scope": "red_shell",
+        "power_up_ability": "Choose any player to drop 3 coins. That player skips their next Power-Up die roll.",
+        "source": "power-pack"
+    },
+    {
+        "name": "Tanooki Mario",
+        "star_ability": "Advance to the next unowned property. You may buy it. If there are no unowned properties, do nothing.",
+        "power_up_scope": "green_shell",
+        "power_up_ability": "If there is a player on the space in front of you, they drop 6 coins.",
+        "source": "power-pack"
+    },
+    {
+        "name": "Fire Mario",
+        "star_ability": "The next two players on the board each drop 4 coins.",
+        "power_up_scope": "green_shell",
+        "power_up_ability": "If the next player on the board is four of more spaces haead of you, they drop 5 coins.",
+        "source": "power-pack"
+    },
+    {
+        "name": "Wario",
+        "star_ability": "You may drop up to 8 coins then move forward that many spaces.",
+        "power_up_scope": "blooper",
+        "power_up_ability": "You may steal 5 coins from another player if you are both on the same space.",
+        "source": "power-pack"
+    },
+    {
+        "name": "Diddy Kong",
+        "star_ability": "Move up to three spaces forward of backwards.",
+        "power_up_scope": "blooper",
+        "power_up_ability": "You may steal 4 coins from a player who is up to five spaces behind you.",
+        "source": "power-pack"
+    }
+]

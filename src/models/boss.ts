@@ -9,8 +9,9 @@ export class Boss implements IBoss {
     rules: string;
     prize: string;
     points: number;
+    source: string;
 
-    selected: boolean = false;
+    active: boolean = false;
 
     constructor(bossData: IBoss) {
         for (let key in bossData) {

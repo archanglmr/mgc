@@ -7,7 +7,8 @@
         "goal": 3,
         "rules": "",
         "prize": "Take the least expensive unowned Propery.",
-        "points": 20
+        "points": 20,
+        "source": "base"
     },
     {
         "level": 2,
@@ -17,7 +18,8 @@
         "goal": 4,
         "rules": "",
         "prize": "All other players pay you 2 coins????",
-        "points": 20
+        "points": 20,
+        "source": "base"
     },
     {
         "level": 3,
@@ -27,7 +29,8 @@
         "goal": 4,
         "rules": "",
         "prize": "Buy one property from any player for face value.",
-        "points": 30
+        "points": 30,
+        "source": "base"
     },
     {
         "level": 4,
@@ -37,7 +40,8 @@
         "goal": 4,
         "rules": "",
         "prize": "Force a propery trade between any two players, including yourself.",
-        "points": 30
+        "points": 30,
+        "source": "base"
     },
     {
         "level": 5,
@@ -47,7 +51,8 @@
         "goal": 5,
         "rules": "",
         "prize": "Send any player, including yourself, to Free Parking. Do not pass GO or pick up Coins along the way.",
-        "points": 40
+        "points": 40,
+        "source": "base"
     },
     {
         "level": 6,
@@ -57,7 +62,8 @@
         "goal": 5,
         "rules": "",
         "prize": "Put any Property up for Auction. Payment goes to the Bank.",
-        "points": 40
+        "points": 40,
+        "source": "base"
     },
     {
         "level": 7,
@@ -67,7 +73,8 @@
         "goal": 5,
         "rules": "",
         "prize": "Send up to two players to Jail, not including yourself.",
-        "points": 50
+        "points": 50,
+        "source": "base"
     },
     {
         "level": 8,
@@ -77,7 +84,8 @@
         "goal": 6,
         "rules": "",
         "prize": "Collect all Coins on this card.",
-        "points": 100
+        "points": 100,
+        "source": "base"
     },
     {
         "level": 8,
@@ -87,6 +95,7 @@
         "goal": 6,
         "rules": "If you roll 3 or lower, all other players pay Bowser Jr. 1 Coin.",
         "prize": "Collect all Coins on this card.",
-        "points": 60
+        "points": 60,
+        "source": "collectors"
     }
 ]

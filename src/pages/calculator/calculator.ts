@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { Selectable } from '../../lib/selectable';
+
 import { Property } from '../../models/property';
 import { Boss } from '../../models/boss';
 
+import { BossProvider } from '../../providers/boss/boss';
+
 ///<reference path="../../data/typings.d.ts" />
 import properties from '../../data/properties.json';
-import bosses from '../../data/bosses.json';
 
 /**
  * Generated class for the CalculatorPage page.
@@ -21,8 +24,8 @@ import bosses from '../../data/bosses.json';
   templateUrl: 'calculator.html',
 })
 export class CalculatorPage {
-  properties: Property[] = [];
-  bosses: Boss[] = [];
+  properties: Selectable<Property>[] = [];
+  bosses: Selectable<Boss>[] = [];
 
   propertyPoints: number = 0;
   bossPoints: number = 0;
@@ -36,22 +39,42 @@ export class CalculatorPage {
   fiveCoins: number = 0;
   oneCoins: number = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private bossProvider: BossProvider
+  ) {
+
     for (let i = 0, c = properties.length; i < c; i += 1) {
-      this.properties.push(new Property(properties[i]));
+      this.properties.push(new Selectable(new Property(properties[i])));
     }
-    for (let i = 0, c = bosses.length; i < c; i += 1) {
-      this.bosses.push(new Boss(bosses[i]));
-    }
+  }
+
+  ionViewWillEnter() {
+    // must reload if the provider updated
+    let selectionCache: Boss[] = Selectable.listSelectedItems(this.bosses);
+
+    this.bosses = [];
+    this.bossProvider.listActiveBosses()
+      .forEach(boss => {
+        let selected = false;
+        if (selectionCache.length) {
+          selected = (-1 !== selectionCache.indexOf(boss));
+        }
+        this.bosses.push(new Selectable(boss, selected));
+      });
+
+    this.updatePropertyPoints();
+    this.updateBossPoints();
+    this.updateCoinPoints();
   }
 
   updatePropertyPoints(): void {
     let points = 0,
         count = 0;
     for (let i = 0, c = this.properties.length; i < c; i += 1) {
-      let property = this.properties[i];
-      if (property.selected) {
-        points += property.points;
+      if (this.properties[i].selected) {
+        points += this.properties[i].item.points;
         count += 1;
       }
     }
@@ -64,9 +87,8 @@ export class CalculatorPage {
     let points = 0,
         count = 0;
     for (let i = 0, c = this.bosses.length; i < c; i += 1) {
-      let boss = this.bosses[i];
-      if (boss.selected) {
-        points += boss.points;
+      if (this.bosses[i].selected) {
+        points += this.bosses[i].item.points;
         count += 1;
       }
     }
