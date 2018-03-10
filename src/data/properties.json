@@ -1,0 +1,130 @@
+[
+    {
+        "color": "brown",
+        "name": "Acorn Plains",
+        "cost": 1,
+        "rent": 1,
+        "monopoly_rent": 2,
+        "points": 10
+    },
+    {
+        "color": "brown",
+        "name": "Yoshi's Hill",
+        "cost": 1,
+        "rent": 1,
+        "monopoly_rent": 2,
+        "points": 10
+    },
+    {
+        "color": "sky",
+        "name": "Layer Cake Dessert",
+        "cost": 1,
+        "rent": 1,
+        "monopoly_rent": 2,
+        "points": 10
+    },
+    {
+        "color": "sky",
+        "name": "Stone-Eye Zone",
+        "cost": 1,
+        "rent": 1,
+        "monopoly_rent": 2,
+        "points": 10
+    },
+    {
+        "color": "fushia",
+        "name": "Stone-Eye Zone",
+        "cost": 2,
+        "rent": 2,
+        "monopoly_rent": 2,
+        "points": 20
+    },
+    {
+        "color": "fushia",
+        "name": "Dragoneel's Undersea Grotto",
+        "cost": 2,
+        "rent": 2,
+        "monopoly_rent": 2,
+        "points": 20
+    },
+    {
+        "color": "orange",
+        "name": "Frosted Glacier",
+        "cost": 2,
+        "rent": 2,
+        "monopoly_rent": 2,
+        "points": 20
+    },
+    {
+        "color": "orange",
+        "name": "Cooligan Fields",
+        "cost": 2,
+        "rent": 2,
+        "monopoly_rent": 2,
+        "points": 20
+    },
+    {
+        "color": "red",
+        "name": "Soda Jungle",
+        "cost": 3,
+        "rent": 3,
+        "monopoly_rent": 6,
+        "points": 30
+    },
+    {
+        "color": "red",
+        "name": "Painted Swampland",
+        "cost": 3,
+        "rent": 3,
+        "monopoly_rent": 6,
+        "points": 30
+    },
+    {
+        "color": "yellow",
+        "name": "Rock-candy Mines",
+        "cost": 3,
+        "rent": 3,
+        "monopoly_rent": 6,
+        "points": 30
+    },
+    {
+        "color": "yellow",
+        "name": "Waddlewing's Nest",
+        "cost": 3,
+        "rent": 3,
+        "monopoly_rent": 6,
+        "points": 30
+    },
+    {
+        "color": "green",
+        "name": "Meringue Clouds",
+        "cost": 4,
+        "rent": 4,
+        "monopoly_rent": 8,
+        "points": 40
+    },
+    {
+        "color": "green",
+        "name": "Switchback Hill",
+        "cost": 4,
+        "rent": 4,
+        "monopoly_rent": 8,
+        "points": 40
+    },
+    {
+        "color": "blue",
+        "name": "Peach's Castle",
+        "cost": 5,
+        "rent": 5,
+        "monopoly_rent": 10,
+        "points": 50
+    },
+    {
+        "color": "blue",
+        "name": "Bowser's Castle",
+        "cost": 5,
+        "rent": 5,
+        "monopoly_rent": 10,
+        "points": 50
+    }
+]
