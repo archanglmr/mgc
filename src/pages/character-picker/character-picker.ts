@@ -37,18 +37,24 @@ export class CharacterPickerPage {
     private charactersProvider: GameCharacterProvider
   ) {}
 
+  ionViewDidLoad() {
+    // This is to initially select all the active game characters
+    this.charactersProvider.listActiveCharacters()
+      .forEach(character => {
+        this.gameCharacters.push(new Selectable(character, true));
+      });
+    this.updateGameCharacters();
+  }
+
   ionViewWillEnter() {
+    console.log('will enter');
     // must reload if the provider updated
     let selectionCache: GameCharacter[] = Selectable.listSelectedItems(this.gameCharacters);
 
     this.gameCharacters = [];
     this.charactersProvider.listActiveCharacters()
       .forEach(character => {
-        let selected = true;
-        if (selectionCache.length) {
-          selected = (-1 !== selectionCache.indexOf(character));
-        }
-        this.gameCharacters.push(new Selectable(character, selected));
+        this.gameCharacters.push(new Selectable(character, (-1 !== selectionCache.indexOf(character))));
       });
     this.updateGameCharacters();
   }
@@ -70,6 +76,7 @@ export class CharacterPickerPage {
     for (let i = 0, c = this.gameCharacters.length; i < c; i += 1) {
       this.gameCharacters[i].selected = selectAll;
     }
+    this.updateGameCharacters();
   }
 
   generate() {

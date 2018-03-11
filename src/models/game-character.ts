@@ -8,6 +8,7 @@ export class GameCharacter implements IGameCharacter {
     source: string;
 
     active: boolean = false;
+    id: string = null;
 
     constructor(gameCharacterData: IGameCharacter) {
         for (let key in gameCharacterData) {
@@ -15,5 +16,6 @@ export class GameCharacter implements IGameCharacter {
                 this[key] = gameCharacterData[key];
             }
         }
+        this.id = this.name.toLowerCase().replace(/ /g, '-');
     }
 }

@@ -38,16 +38,25 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222,
+  dark:       #222
+);
 
-  brown: #a84d2b,
-  sky: #cddae7,
-  fushia: #d03b7c,
-  orange: #ec9631,
-  red: #e22f35,
-  yellow: #f8d966,
-  green: #08b844,
-  blue: #2252b1
+$property-colors: (
+  brown: #9c4323,
+  sky: #9ddeec,
+  fushia: #d1377a,
+  orange: #e78340,
+  red: #db373c,
+  yellow: #fcef3b,
+  green: #1ba74a,
+  blue: #2769e4
+);
+
+$game-character-colors: (
+  mario: rgb(31, 130, 197),
+  donkey-kong: rgb(221, 38, 38),
+  princess-peach: rgb(214, 13, 113),
+  yoshi: rgb(99, 143, 11)
 );
 
 

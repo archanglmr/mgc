@@ -1,3 +1,11 @@
+@mixin game-character($character-name) {
+    ion-card-header, h3 {
+        color: color($game-character-colors, $character-name);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
 page-game-character-assignment {
     .cards-bg { background-color: color($colors, light); }
 
@@ -19,5 +27,9 @@ page-game-character-assignment {
             height: 85%;
             background-color: #ccc;
         }
+    }
+
+    @each $key, $color in $game-character-colors {
+        ion-card.#{$key} { @include game-character($key); }
     }
 }

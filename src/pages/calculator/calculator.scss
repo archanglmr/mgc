@@ -1,11 +1,27 @@
+@mixin checkbox-color($color) {
+    .checkbox-ios {
+        .checkbox-icon {
+            border-color: color($property-colors, $color);
+            border-width: 2px;
+        }
+        .checkbox-checked {
+            background-color: color($property-colors, $color);
+        }
+    }
+    .checkbox-md {
+        .checkbox-icon {
+            border-color: color($property-colors, $color);
+        }
+        .checkbox-checked {
+            background-color: color($property-colors, $color);
+        }
+    }
+}
+
 page-calculator {
     ion-navbar h3 { padding-left: 1rem; }
-    ion-item.brown .checkbox-ios .checkbox-icon { border-width: 2px; border-color: color($colors, brown); }
-    ion-item.sky .checkbox-ios .checkbox-icon { border-width: 2px; border-color: color($colors, sky); }
-    ion-item.fushia .checkbox-ios .checkbox-icon { border-width: 2px; border-color: color($colors, fushia); }
-    ion-item.orange .checkbox-ios .checkbox-icon { border-width: 2px; border-color: color($colors, orange); }
-    ion-item.red .checkbox-ios .checkbox-icon { border-width: 2px; border-color: color($colors, red); }
-    ion-item.yellow .checkbox-ios .checkbox-icon { border-width: 2px; border-color: color($colors, yellow); }
-    ion-item.green .checkbox-ios .checkbox-icon { border-width: 2px; border-color: color($colors, green); }
-    ion-item.blue .checkbox-ios .checkbox-icon { border-width: 2px; border-color: color($colors, blue); }
+
+    @each $key, $color in $property-colors {
+        ion-item.#{$key} { @include checkbox-color($key); }
+    }
 }

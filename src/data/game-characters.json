@@ -21,7 +21,7 @@
         "source": "base"
     },
     {
-        "name": "Donky Kong",
+        "name": "Donkey Kong",
         "star_ability": "Steal 3 coins from each player.",
         "power_up_scope": "pow",
         "power_up_ability": "All other players drop 2 Coins.",

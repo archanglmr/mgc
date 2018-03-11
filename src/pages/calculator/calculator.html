@@ -27,7 +27,7 @@
     </ion-item-divider>
 
     <ion-item *ngFor="let property of properties" ngClass="{{property.item.color}}">
-      <ion-checkbox [(ngModel)]="property.selected" (ionChange)="updatePropertyPoints()" [color]="property.item.color"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="property.selected" (ionChange)="updatePropertyPoints()"></ion-checkbox>
       <ion-label>{{property.item.name}}</ion-label>
       <span item-end>{{property.item.points}} pts</span>
     </ion-item>
