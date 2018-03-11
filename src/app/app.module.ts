@@ -8,6 +8,7 @@ import { CalculatorPage } from '../pages/calculator/calculator';
 import { CharacterPickerPage } from '../pages/character-picker/character-picker';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SettingsPage } from '../pages/settings/settings';
+import { GameCharacterAssignmentPage } from '../pages/game-character-assignment/game-character-assignment';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +22,8 @@ import { BossProvider } from '../providers/boss/boss';
     CalculatorPage,
     CharacterPickerPage,
     TabsPage,
-    SettingsPage
+    SettingsPage,
+    GameCharacterAssignmentPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { BossProvider } from '../providers/boss/boss';
     CalculatorPage,
     CharacterPickerPage,
     TabsPage,
-    SettingsPage
+    SettingsPage,
+    GameCharacterAssignmentPage
   ],
   providers: [
     StatusBar,

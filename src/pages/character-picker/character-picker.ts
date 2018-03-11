@@ -8,6 +8,8 @@ import { GameCharacter } from '../../models/game-character';
 
 import { GameCharacterProvider } from '../../providers/game-character/game-character';
 
+import { GameCharacterAssignmentPage } from '../game-character-assignment/game-character-assignment';
+
 /**
  * Generated class for the CharacterPickerPage page.
  *
@@ -81,8 +83,7 @@ export class CharacterPickerPage {
         );
       }
 
-      console.log('RESULTS:');
-      results.forEach(character => console.log(` - ${character.name}`));
+      this.navCtrl.push(GameCharacterAssignmentPage, {characters: results});
     }
   }
 

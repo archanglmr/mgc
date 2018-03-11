@@ -53,13 +53,17 @@
     </ion-item-divider>
 
     <ion-item>
-      <span item-start>5's</span>
+      <ion-avatar item-start>
+        <img src="/assets/imgs/coins/five.png" />
+      </ion-avatar>
       <ion-range min="0" max="40" pin="true" step="1" [(ngModel)]="fiveCoins" (ionChange)="updateCoinPoints()"></ion-range>
       <span item-end>{{fiveCoins}} Coins</span>
     </ion-item>
 
     <ion-item>
-      <span item-start>1's</span>
+        <ion-avatar item-start>
+          <img src="/assets/imgs/coins/one.png" />
+        </ion-avatar>
       <ion-range min="0" max="40" pin="true" step="1" [(ngModel)]="oneCoins" (ionChange)="updateCoinPoints()"></ion-range>
       <span item-end>{{oneCoins}} Coins</span>
     </ion-item>
