@@ -7,9 +7,8 @@ import { Property } from '../../models/property';
 import { Boss } from '../../models/boss';
 
 import { BossProvider } from '../../providers/boss/boss';
+import { PropertyProvider } from '../../providers/property/property';
 
-///<reference path="../../data/typings.d.ts" />
-import properties from '../../data/properties.json';
 
 /**
  * Generated class for the CalculatorPage page.
@@ -42,12 +41,13 @@ export class CalculatorPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
+    private propertyProvider: PropertyProvider,
     private bossProvider: BossProvider
   ) {
-
-    for (let i = 0, c = properties.length; i < c; i += 1) {
-      this.properties.push(new Selectable(new Property(properties[i])));
-    }
+    this.propertyProvider.listProperties()
+      .forEach(property => {
+        this.properties.push(new Selectable(new Property(property)));
+      });
   }
 
   ionViewWillEnter() {

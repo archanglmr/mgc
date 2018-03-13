@@ -15,6 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GameCharacterProvider } from '../providers/game-character/game-character';
 import { BossProvider } from '../providers/boss/boss';
+import { PropertyProvider } from '../providers/property/property';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BossProvider } from '../providers/boss/boss';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GameCharacterProvider,
-    BossProvider
+    BossProvider,
+    PropertyProvider
   ]
 })
 export class AppModule {}
