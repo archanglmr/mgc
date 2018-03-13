@@ -4,11 +4,12 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
-import { CalculatorPage } from '../pages/calculator/calculator';
-import { CharacterPickerPage } from '../pages/character-picker/character-picker';
+
+import { CalculatorPageModule } from '../pages/calculator/calculator.module';
+import { CharacterPickerPageModule } from '../pages/character-picker/character-picker.module';
+import { SettingsPageModule } from '../pages/settings/settings.module';
+import { GameCharacterAssignmentPageModule } from '../pages/game-character-assignment/game-character-assignment.module';
 import { TabsPage } from '../pages/tabs/tabs';
-import { SettingsPage } from '../pages/settings/settings';
-import { GameCharacterAssignmentPage } from '../pages/game-character-assignment/game-character-assignment';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,25 +20,21 @@ import { BossProvider } from '../providers/boss/boss';
   declarations: [
     MyApp,
     HomePage,
-    CalculatorPage,
-    CharacterPickerPage,
-    TabsPage,
-    SettingsPage,
-    GameCharacterAssignmentPage
+    TabsPage
   ],
   imports: [
     BrowserModule,
+    CalculatorPageModule,
+    CharacterPickerPageModule,
+    SettingsPageModule,
+    GameCharacterAssignmentPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    CalculatorPage,
-    CharacterPickerPage,
-    TabsPage,
-    SettingsPage,
-    GameCharacterAssignmentPage
+    TabsPage
   ],
   providers: [
     StatusBar,

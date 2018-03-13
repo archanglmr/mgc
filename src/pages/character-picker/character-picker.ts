@@ -47,7 +47,6 @@ export class CharacterPickerPage {
   }
 
   ionViewWillEnter() {
-    console.log('will enter');
     // must reload if the provider updated
     let selectionCache: GameCharacter[] = Selectable.listSelectedItems(this.gameCharacters);
 

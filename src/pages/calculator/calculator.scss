@@ -1,20 +1,12 @@
 @mixin checkbox-color($color) {
-    .checkbox-ios {
-        .checkbox-icon {
-            border-color: color($property-colors, $color);
-            border-width: 2px;
-        }
-        .checkbox-checked {
-            background-color: color($property-colors, $color);
-        }
-    }
-    .checkbox-md {
-        .checkbox-icon {
-            border-color: color($property-colors, $color);
-        }
-        .checkbox-checked {
-            background-color: color($property-colors, $color);
-        }
+    margin-bottom: 1px;
+    background-color: color($property-colors, $color);
+    font-weight: 600;
+
+    @if (sky == $color or yellow == $color) {
+        color: black;
+    } @else {
+        color: white;
     }
 }
 

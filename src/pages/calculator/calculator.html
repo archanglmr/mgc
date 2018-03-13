@@ -6,28 +6,28 @@
 -->
 <ion-header>
   <ion-navbar>
-    <h3 start>{{totalPoints}} pts</h3>
-
-    <ion-title>Calculator</ion-title>
-
-    <ion-buttons end>
+    <ion-buttons start>
       <button ion-button (click)="reset()">
         Reset
       </button>
+    </ion-buttons>
+    <ion-title>Calculator</ion-title>
+    <ion-buttons end>
+      <h3>{{totalPoints}} pts</h3>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
+  <ion-list no-lines>
     <ion-item-divider>
       <ion-label>Properties ({{propertyCount}})</ion-label>
       <span item-end>{{propertyPoints}} pts</span>
     </ion-item-divider>
 
     <ion-item *ngFor="let property of properties" ngClass="{{property.item.color}}">
-      <ion-checkbox [(ngModel)]="property.selected" (ionChange)="updatePropertyPoints()"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="property.selected" (ionChange)="updatePropertyPoints()" color="dark"></ion-checkbox>
       <ion-label>{{property.item.name}}</ion-label>
       <span item-end>{{property.item.points}} pts</span>
     </ion-item>
@@ -54,7 +54,7 @@
 
     <ion-item>
       <ion-avatar item-start>
-        <img src="/assets/imgs/coins/five.png" />
+        <img src="assets/imgs/coins/five.png" />
       </ion-avatar>
       <ion-range min="0" max="40" pin="true" step="1" [(ngModel)]="fiveCoins" (ionChange)="updateCoinPoints()"></ion-range>
       <span item-end>{{fiveCoins}} Coins</span>
@@ -62,7 +62,7 @@
 
     <ion-item>
         <ion-avatar item-start>
-          <img src="/assets/imgs/coins/one.png" />
+          <img src="assets/imgs/coins/one.png" />
         </ion-avatar>
       <ion-range min="0" max="40" pin="true" step="1" [(ngModel)]="oneCoins" (ionChange)="updateCoinPoints()"></ion-range>
       <span item-end>{{oneCoins}} Coins</span>
