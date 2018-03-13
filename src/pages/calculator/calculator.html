@@ -41,7 +41,7 @@
 
     <ion-item *ngFor="let boss of bosses">
       <ion-checkbox [(ngModel)]="boss.selected" (ionChange)="updateBossPoints()"></ion-checkbox>
-      <ion-label>{{boss.item.name}}</ion-label>
+      <ion-label>({{boss.item.level}}) {{boss.item.name}}</ion-label>
       <span item-end>{{boss.item.points}} pts</span>
     </ion-item>
   </ion-list>
