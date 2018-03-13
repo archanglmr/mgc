@@ -20,9 +20,4 @@ export class GameCharacterAssignmentPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.gameCharacters = navParams.data.characters;
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GameCharacterAssignmentPage');
-  }
-
 }

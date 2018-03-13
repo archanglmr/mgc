@@ -14,40 +14,5 @@
 
 
 <ion-content class="cards-bg">
-
-    <ion-card *ngFor="let character of gameCharacters; let i = index" [ngClass]="character.id">
-      <!-- <img src="/assets/imgs/power-ups/star.png" /> -->
-      <!-- <div padding style="padding-bottom: 0">#{{i + 1}}</div> -->
-      <ion-card-header text-center>{{character.name}}</ion-card-header>
-
-      <ion-card-content>
-        <ion-grid no-padding>
-          <ion-row>
-            <ion-col col-2 text-center>
-                <img src="assets/imgs/power-ups/star.png" />
-            </ion-col>
-            <ion-col col-1 text-center>
-              <div class="divider"></div>
-            </ion-col>
-            <ion-col col-9>
-              <h3>Super Star Ability</h3>
-              <p>{{character.star_ability}}</p>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col col-2 text-center>
-              <img src="assets/imgs/power-ups/{{character.power_up_scope}}.png" />
-            </ion-col>
-            <ion-col col-1 text-center>
-                <div class="divider"></div>
-            </ion-col>
-            <ion-col col-9>
-              <h3>Power-Up Boost</h3>
-              <p>{{character.power_up_ability}}</p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card-content>
-    </ion-card>
-
+  <character-card *ngFor="let character of gameCharacters" [character]="character"></character-card>
 </ion-content>
