@@ -1,35 +1,4 @@
-@mixin game-character($character-name) {
-    ion-card-header, h3 {
-        color: color($game-character-colors, $character-name);
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-}
-
 page-game-character-assignment {
     .cards-bg { background-color: color($colors, light); }
-
-    ion-card-content ion-grid ion-row {
-        height: 8rem;
-        ion-col {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-
-            p { line-height: 1.2; font-size: 1.3rem !important; }
-        }
-
-        div.divider {
-            display: inline-block;
-            margin: 0 auto;
-            width: 1px;
-            height: 85%;
-            background-color: #ccc;
-        }
-    }
-
-    @each $key, $color in $game-character-colors {
-        ion-card.#{$key} { @include game-character($key); }
-    }
+    ion-title { margin-top: 16px; }
 }

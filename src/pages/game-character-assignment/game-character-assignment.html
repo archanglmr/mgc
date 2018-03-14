@@ -5,14 +5,12 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Players</ion-title>
-  </ion-navbar>
-
+  <ion-navbar></ion-navbar>
 </ion-header>
 
-
 <ion-content class="cards-bg">
-  <character-card *ngFor="let character of gameCharacters" [character]="character"></character-card>
+  <div *ngFor="let character of gameCharacters; let i = index">
+      <ion-title>#{{i + 1}}</ion-title>
+      <character-card [character]="character" [image]="false"></character-card>
+  </div>
 </ion-content>

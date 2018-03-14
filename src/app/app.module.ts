@@ -17,6 +17,8 @@ import { GameCharacterProvider } from '../providers/game-character/game-characte
 import { BossProvider } from '../providers/boss/boss';
 import { PropertyProvider } from '../providers/property/property';
 
+import { ComponentsModule } from '../components/components.module';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -29,7 +31,8 @@ import { PropertyProvider } from '../providers/property/property';
     CharacterPickerPageModule,
     SettingsPageModule,
     GameCharacterAssignmentPageModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

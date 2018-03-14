@@ -13,4 +13,5 @@ import { GameCharacter } from '../../models/game-character';
 })
 export class CharacterCardComponent {
   @Input() character: GameCharacter;
+  @Input() image: boolean = true;
 }

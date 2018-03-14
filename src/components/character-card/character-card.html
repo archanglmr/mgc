@@ -1,5 +1,7 @@
 <ion-card [ngClass]="character.id">
-  <!-- <img src="assets/imgs/power-ups/star.png" /> -->
+  <div class="image" *ngIf="image">
+    <div></div>
+  </div>
   <ion-card-header text-center>{{character.name}}</ion-card-header>
 
   <ion-card-content>
