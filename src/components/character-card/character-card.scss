@@ -2,28 +2,38 @@
     ion-card-header, h3 {
         color: color($game-character-colors, $character-name);
     }
-    div.image {
+    div.gradient {
         background-color: color($game-character-colors, $character-name);
-        div {
+        div.image {
             background-image: url('/assets/imgs/characters/#{$character-name}.png');
         }
     }
 }
 
 character-card {
-    div.image {
+    div.gradient {
         border: 5vw solid #fff;
         width: 100%;
         height: calc(80vw);
         background-color: #ccc;
         background-image: radial-gradient(transparent, rgba(0, 0, 0, .4));
 
-        div {
+        div.image {
             width: 100%;
             height: 100%;
             background-position: top center;
             background-repeat: no-repeat;
             background-size: auto 200%;
+
+            div.decoration {
+                width: 100%;
+                height: 100%;
+                background-position: bottom center;
+                background-repeat: no-repeat;
+                // border-top: 5px solid red;
+                background-image: url('/assets/imgs/squares.png');
+                background-size: 100% auto;
+            }
         }
     }
     ion-card-header {
