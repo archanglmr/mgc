@@ -5,7 +5,7 @@
     div.gradient {
         background-color: color($game-character-colors, $character-name);
         div.image {
-            background-image: url('/assets/imgs/characters/#{$character-name}.png');
+            background-image: url('../assets/imgs/characters/#{$character-name}.png');
         }
     }
 }
@@ -30,8 +30,7 @@ character-card {
                 height: 100%;
                 background-position: bottom center;
                 background-repeat: no-repeat;
-                // border-top: 5px solid red;
-                background-image: url('/assets/imgs/squares.png');
+                background-image: url('../assets/imgs/squares.png');
                 background-size: 100% auto;
             }
         }
