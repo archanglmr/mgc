@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-
 import { Selectable } from '../../lib/selectable';
-
 import { GameCharacter } from '../../models/game-character';
-
 import { GameCharacterProvider } from '../../providers/game-character/game-character';
-
 import { GameCharacterAssignmentPage } from '../game-character-assignment/game-character-assignment';
 
 /**

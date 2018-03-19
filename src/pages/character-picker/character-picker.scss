@@ -1,3 +1,9 @@
 page-character-picker {
-
+    character-icon {
+        width: 40px;
+        height: 40px;
+        .decoration {
+            display:  none;
+        }
+    }
 }

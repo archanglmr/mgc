@@ -18,15 +18,12 @@
   <ion-list>
       <ion-item-divider>
         <ion-label>My Characters</ion-label>
-        <ion-note item-end>Source</ion-note>
       </ion-item-divider>
 
       <ion-item *ngFor="let character of gameCharacters">
         <ion-checkbox [(ngModel)]="character.selected" (ionChange)="updateGameCharacter(character)"></ion-checkbox>
         <ion-label>{{character.item.name}}</ion-label>
-        <!-- <ion-note item-end>({{character.source}})</ion-note> -->
-        <ion-icon item-end name="star" *ngIf="'collectors' == character.item.source"></ion-icon>
-        <ion-icon item-end name="flash" *ngIf="'power-pack' == character.item.source"></ion-icon>
+        <character-icon [ngClass]="character.item.id" item-end></character-icon>
       </ion-item>
     </ion-list>
 

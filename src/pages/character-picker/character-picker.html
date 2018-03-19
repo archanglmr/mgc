@@ -34,7 +34,10 @@
 
     <ion-item *ngFor="let character of gameCharacters">
       <ion-checkbox [(ngModel)]="character.selected" (ionChange)="updateGameCharacters()"></ion-checkbox>
-      <ion-label>{{character.item.name}}</ion-label>
+      <ion-label>
+        {{character.item.name}}
+      </ion-label>
+      <character-icon [ngClass]="character.item.id" item-end></character-icon>
     </ion-item>
   </ion-list>
 

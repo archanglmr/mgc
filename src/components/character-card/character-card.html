@@ -1,9 +1,5 @@
 <ion-card [ngClass]="character.id">
-  <div class="gradient" *ngIf="image">
-    <div class="image">
-      <div class="decoration"></div>
-    </div>
-  </div>
+  <character-icon [ngClass]="character.id"></character-icon>
   <ion-card-header text-center>{{character.name}}</ion-card-header>
 
   <ion-card-content>

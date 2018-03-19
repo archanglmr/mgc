@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
-
 import { GameCharacter } from '../../models/game-character';
-
 import { GameCharacterProvider } from '../../providers/game-character/game-character';
 @Component({
   selector: 'page-home',
