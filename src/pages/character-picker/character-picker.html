@@ -39,7 +39,10 @@
   </ion-list>
 
   <ion-list text-center>
-      <button ion-button text-center [disabled]="!generateEnabled" (click)="generate()">Generate Players</button>
+      <button ion-button icon-right text-center [disabled]="!generateEnabled" (click)="generate()">
+        Generate Players
+        <ion-icon name="shuffle"></ion-icon>
+      </button>
   </ion-list>
 
 </ion-content>

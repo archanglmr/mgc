@@ -43,7 +43,7 @@
     },
     {
         "name": "Boo",
-        "star_ability": "You may drop 3 coins to use the Super Star ability of any other character on the board.",
+        "star_ability": "You may drop 3 coins to use the Super Star Ability of any other Character on the board.",
         "power_up_scope": "pow",
         "power_up_ability": "All other players drop 1 coins. You may advance to the space diretly behind the next player on the board. Follow the rule for that space.",
         "source": "power-pack"
@@ -85,7 +85,7 @@
     },
     {
         "name": "Diddy Kong",
-        "star_ability": "Move up to three spaces forward of backwards.",
+        "star_ability": "Move up to three spaces forward or backward.",
         "power_up_scope": "blooper",
         "power_up_ability": "You may steal 4 coins from a player who is up to five spaces behind you.",
         "source": "power-pack"
