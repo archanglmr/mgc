@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { CalculatorPage } from './calculator';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [
-    CalculatorPage,
+    CalculatorPage
   ],
   imports: [
-    IonicPageModule.forChild(CalculatorPage),
-  ],
+    ComponentsModule,
+    IonicPageModule.forChild(CalculatorPage)
+  ]
 })
 export class CalculatorPageModule {}

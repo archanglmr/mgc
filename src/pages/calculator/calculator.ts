@@ -30,6 +30,7 @@ export class CalculatorPage {
   bossPoints: number = 0;
   coinPoints: number = 0;
   totalPoints: number = 0;
+  peachRent: number = 0;
 
   propertyCount: number = 0;
   bossCount: number = 0;
@@ -71,15 +72,51 @@ export class CalculatorPage {
 
   updatePropertyPoints(): void {
     let points = 0,
-        count = 0;
+        count = 0,
+        peachRent = 0,
+
+        monopolies: string[] = [],
+        currentColor = '',
+        monopoly = false;
+
     for (let i = 0, c = this.properties.length; i < c; i += 1) {
+      let property = this.properties[i].item;
+
+      // Monopoly finder (assums property order is by color)
+      if (currentColor !== property.color) {
+        if (monopoly) {
+          monopolies.push(currentColor);
+        }
+        currentColor = property.color;
+        monopoly = true;
+      }
+
+
       if (this.properties[i].selected) {
-        points += this.properties[i].item.points;
+        points += property.points;
         count += 1;
+      } else {
+        monopoly = false;
+      }
+    }
+    if (monopoly) {
+      monopolies.push(currentColor);
+    }
+
+    // Peach Calculator
+    for (let i = 0, c = this.properties.length; i < c; i += 1) {
+      let property = this.properties[i].item;
+      if (this.properties[i].selected) {
+        if (-1 === monopolies.indexOf(property.color)) {
+          peachRent += property.rent;
+        } else {
+          peachRent += property.monopoly_rent;
+        }
       }
     }
     this.propertyPoints = points;
     this.propertyCount = count;
+    this.peachRent = peachRent;
     this.updateTotalPoints();
   }
 

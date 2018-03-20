@@ -12,6 +12,14 @@
 page-calculator {
     ion-navbar h3 { padding-left: 1rem; }
 
+    character-icon {
+        width: 40px;
+        height: 40px;
+        .decoration {
+            display:  none;
+        }
+    }
+
     @each $key, $color in $property-colors {
         ion-item.#{$key} { @include checkbox-color($key); }
     }
