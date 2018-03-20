@@ -1,7 +1,6 @@
 @mixin checkbox-color($color) {
     margin-bottom: 1px;
     background-color: color($property-colors, $color);
-    font-weight: 600;
 
     @if (sky == $color or yellow == $color) {
         color: black;

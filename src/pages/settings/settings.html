@@ -36,8 +36,6 @@
         <ion-item *ngFor="let boss of bosses">
           <ion-checkbox [(ngModel)]="boss.selected" (ionChange)="updateBoss(boss)"></ion-checkbox>
           <ion-label>{{boss.item.name}}</ion-label>
-          <ion-icon item-end name="star" *ngIf="'collectors' == boss.item.source"></ion-icon>
-          <ion-icon item-end name="flash" *ngIf="'power-pack' == boss.item.source"></ion-icon>
           <ion-note item-end>{{boss.item.level}}</ion-note>
         </ion-item>
       </ion-list>
