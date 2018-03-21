@@ -1,5 +1,5 @@
 <ion-card [ngClass]="character.id">
-  <character-icon [ngClass]="character.id"></character-icon>
+  <character-icon [ngClass]="character.id" *ngIf="image"></character-icon>
   <ion-card-header text-center>{{character.name}}</ion-card-header>
 
   <ion-card-content>

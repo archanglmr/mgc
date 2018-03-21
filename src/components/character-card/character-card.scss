@@ -1,3 +1,8 @@
+@mixin game-character($character-name) {
+    ion-card-header, h3 {
+        color: color($game-character-colors, $character-name);
+    }
+}
 character-card {
     character-icon {
         width: 100%;
@@ -32,5 +37,9 @@ character-card {
             height: 85%;
             background-color: #ccc;
         }
+    }
+
+    @each $key, $color in $game-character-colors {
+        ion-card.#{$key} { @include game-character($key); }
     }
 }

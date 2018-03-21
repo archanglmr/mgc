@@ -1,7 +1,4 @@
 @mixin game-character($character-name) {
-    ion-card-header, h3 {
-        color: color($game-character-colors, $character-name);
-    }
     div.gradient {
         background-color: color($game-character-colors, $character-name);
         div.image {
