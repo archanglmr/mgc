@@ -33,9 +33,9 @@
     </ion-item>
   </ion-list>
 
-  <ion-list>
+  <ion-list *ngIf="peach.active">
     <ion-item>
-      <character-icon class="princess-peach" item-start></character-icon>
+      <character-icon class="{{peach.id}}" item-start></character-icon>
       <ion-label>Peach Rent</ion-label>
       <span item-end>{{peachRent}} Coins</span>
     </ion-item>
@@ -64,7 +64,7 @@
       <ion-avatar item-start>
         <img src="assets/imgs/coins/five.png" />
       </ion-avatar>
-      <ion-range min="0" max="40" pin="true" step="1" [(ngModel)]="fiveCoins" (ionChange)="updateCoinPoints()"></ion-range>
+      <ion-range min="0" max="30" pin="true" step="1" [(ngModel)]="fiveCoins" (ionChange)="updateCoinPoints()"></ion-range>
       <span item-end>{{fiveCoins}} Coins</span>
     </ion-item>
 
@@ -72,7 +72,7 @@
         <ion-avatar item-start>
           <img src="assets/imgs/coins/one.png" />
         </ion-avatar>
-      <ion-range min="0" max="40" pin="true" step="1" [(ngModel)]="oneCoins" (ionChange)="updateCoinPoints()"></ion-range>
+      <ion-range min="0" max="30" pin="true" step="1" [(ngModel)]="oneCoins" (ionChange)="updateCoinPoints()"></ion-range>
       <span item-end>{{oneCoins}} Coins</span>
     </ion-item>
   </ion-list>

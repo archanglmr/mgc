@@ -5,9 +5,11 @@ import { Selectable } from '../../lib/selectable';
 
 import { Property } from '../../models/property';
 import { Boss } from '../../models/boss';
+import { GameCharacter } from '../../models/game-character';
 
 import { BossProvider } from '../../providers/boss/boss';
 import { PropertyProvider } from '../../providers/property/property';
+import { GameCharacterProvider } from '../../providers/game-character/game-character';
 
 
 /**
@@ -39,16 +41,21 @@ export class CalculatorPage {
   fiveCoins: number = 0;
   oneCoins: number = 0;
 
+  peach: GameCharacter;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private propertyProvider: PropertyProvider,
-    private bossProvider: BossProvider
+    private bossProvider: BossProvider,
+    private charactersProvider: GameCharacterProvider
   ) {
     this.propertyProvider.listProperties()
       .forEach(property => {
         this.properties.push(new Selectable(new Property(property)));
       });
+
+    this.peach = this.charactersProvider.getCharacter('princess-peach');
   }
 
   ionViewWillEnter() {
