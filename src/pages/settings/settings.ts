@@ -40,6 +40,8 @@ export class SettingsPage {
 
     this.bossProvider.listAllBosses()
       .forEach(boss => this.bosses.push(new Selectable(boss, boss.active)));
+
+    this.updateCharacterSelectAllButton();
   }
 
 
@@ -54,6 +56,7 @@ export class SettingsPage {
 
   toggleAll() {
     for (let i = 0, c = this.gameCharacters.length; i < c; i += 1) {
+      this.gameCharacters[i].item.active = this.selectAll;
       this.gameCharacters[i].selected = this.selectAll;
     }
     this.updateCharacterSelectAllButton();
