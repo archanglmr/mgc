@@ -44,4 +44,16 @@ export class GameCharacterProvider {
     }
     return characters;
   }
+
+  getCharacter(nameOrId: string): GameCharacter {
+    let id = nameOrId.toLowerCase().replace(/ /g, '-');
+
+    for (let i = 0, c = this.characters.length; i < c; i += 1) {
+      if (id === this.characters[i].id) {
+        return this.characters[i];
+      }
+    }
+
+    return null;
+  }
 }
