@@ -18,6 +18,7 @@
   <ion-list>
       <ion-item-divider>
         <ion-label>My Characters</ion-label>
+        <button ion-button item-end (click)="toggleAll()">{{selectLabel}}</button>
       </ion-item-divider>
 
       <ion-item *ngFor="let character of gameCharacters">
