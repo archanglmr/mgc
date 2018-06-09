@@ -1,16 +1,8 @@
 import { Injectable } from '@angular/core';
-
 import { Boss } from '../../models/boss';
-
 ///<reference path="../../data/typings.d.ts" />
 import bossData from '../../data/bosses.json';
 
-/*
-  Generated class for the BossProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class BossProvider {
   bosses: Boss[] = [];

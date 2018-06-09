@@ -1,16 +1,8 @@
 import { Injectable } from '@angular/core';
-
 import { GameCharacter } from '../../models/game-character';
-
 ///<reference path="../../data/typings.d.ts" />
 import gameCharacterData from '../../data/game-characters.json';
 
-/*
-  Generated class for the GameCharacterProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class GameCharacterProvider {
   characters: GameCharacter[] = [];

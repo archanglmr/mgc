@@ -1,16 +1,8 @@
 import { Injectable } from '@angular/core';
-
 import { Property } from '../../models/property';
-
 ///<reference path="../../data/typings.d.ts" />
 import propertyData from '../../data/properties.json';
 
-/*
-  Generated class for the PropertyProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class PropertyProvider {
   properties: Property[] = [];
