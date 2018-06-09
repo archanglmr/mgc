@@ -5,11 +5,11 @@ import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [
-    GameCharacterAssignmentPage,
+    GameCharacterAssignmentPage
   ],
   imports: [
     IonicPageModule.forChild(GameCharacterAssignmentPage),
     ComponentsModule
-  ],
+  ]
 })
 export class GameCharacterAssignmentPageModule {}

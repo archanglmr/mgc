@@ -1,13 +1,8 @@
-<ion-header>
-</ion-header>
-
+<ion-header></ion-header>
 <ion-content no-bounce class="cards-bg">
-
   <ion-slides pager>
-
     <ion-slide *ngFor="let character of gameCharacters">
       <character-card [character]="character"></character-card>
     </ion-slide>
-
   </ion-slides>
 </ion-content>

@@ -1,23 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage } from 'ionic-angular';
 import { Selectable } from '../../lib/selectable';
-
 import { Property } from '../../models/property';
 import { Boss } from '../../models/boss';
 import { GameCharacter } from '../../models/game-character';
-
 import { BossProvider } from '../../providers/boss/boss';
 import { PropertyProvider } from '../../providers/property/property';
 import { GameCharacterProvider } from '../../providers/game-character/game-character';
-
-
-/**
- * Generated class for the CalculatorPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -44,8 +33,6 @@ export class CalculatorPage {
   peach: GameCharacter;
 
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
     private propertyProvider: PropertyProvider,
     private bossProvider: BossProvider,
     private charactersProvider: GameCharacterProvider

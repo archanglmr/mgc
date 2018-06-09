@@ -1,16 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { Selectable } from '../../lib/selectable';
 import { GameCharacter } from '../../models/game-character';
 import { GameCharacterProvider } from '../../providers/game-character/game-character';
 import { GameCharacterAssignmentPage } from '../game-character-assignment/game-character-assignment';
-
-/**
- * Generated class for the CharacterPickerPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -27,8 +20,7 @@ export class CharacterPickerPage {
   selectLabel = 'Clear All';
 
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
+    private navCtrl: NavController,
     private charactersProvider: GameCharacterProvider
   ) {}
 

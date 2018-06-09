@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { HomePage } from '../home/home';
 import { CharacterPickerPage } from '../character-picker/character-picker';
 import { CalculatorPage } from '../calculator/calculator';
@@ -9,7 +8,6 @@ import { SettingsPage } from '../settings/settings';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-
   tab1Root = HomePage;
   tab2Root = CharacterPickerPage;
   tab3Root = CalculatorPage;

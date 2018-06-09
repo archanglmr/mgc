@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams } from 'ionic-angular';
 import { GameCharacter } from '../../models/game-character';
-
-/**
- * Generated class for the GameCharacterAssignmentPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -17,7 +10,7 @@ import { GameCharacter } from '../../models/game-character';
 export class GameCharacterAssignmentPage {
   gameCharacters: GameCharacter[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private navParams: NavParams) {
     this.gameCharacters = navParams.data.characters;
   }
 }
