@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NativeStorage } from '@ionic-native/native-storage';
 import { GameCharacterProvider } from '../providers/game-character/game-character';
 import { BossProvider } from '../providers/boss/boss';
 import { PropertyProvider } from '../providers/property/property';
@@ -43,6 +44,7 @@ import { ComponentsModule } from '../components/components.module';
   providers: [
     StatusBar,
     SplashScreen,
+    NativeStorage,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GameCharacterProvider,
     BossProvider,

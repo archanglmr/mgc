@@ -1,20 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage } from 'ionic-angular';
 import { Selectable } from '../../lib/selectable';
-
 import { GameCharacter } from '../../models/game-character';
 import { Boss } from '../../models/boss';
-
 import { GameCharacterProvider } from '../../providers/game-character/game-character';
 import { BossProvider } from '../../providers/boss/boss';
-
-/**
- * Generated class for the SettingsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -29,21 +19,21 @@ export class SettingsPage {
   private selectAll = false;
 
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
     private charactersProvider: GameCharacterProvider,
     private bossProvider: BossProvider
-  ) {
+  ) { }
 
+  ionViewDidLoad() {
     this.charactersProvider.listAllCharacters()
       .forEach(character => this.gameCharacters.push(new Selectable(character, character.active)));
 
     this.bossProvider.listAllBosses()
       .forEach(boss => this.bosses.push(new Selectable(boss, boss.active)));
-
-    this.updateCharacterSelectAllButton();
   }
 
+  ionViewWillEnter() {
+    this.updateCharacterSelectAllButton();
+  }
 
   updateGameCharacter(character: Selectable<GameCharacter>) {
     character.item.active = character.selected;
@@ -52,6 +42,7 @@ export class SettingsPage {
 
   updateBoss(boss: Selectable<Boss>) {
     boss.item.active = boss.selected;
+    this.bossProvider.saveToDisk();
   }
 
   toggleAll() {
@@ -72,5 +63,6 @@ export class SettingsPage {
     }
     this.selectAll = selectAll;
     this.selectLabel = this.selectAll ? 'Select All' : 'Clear All';
+    this.charactersProvider.saveToDisk();
   }
 }
